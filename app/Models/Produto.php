@@ -12,7 +12,7 @@ class Produto extends Model
     protected $fillable = [
         'nome',
         'quantidade',
-        'valor'
+        'preco'
     ];
 
     public function produto(){

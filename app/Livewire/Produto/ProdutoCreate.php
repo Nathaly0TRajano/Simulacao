@@ -14,7 +14,7 @@ class ProdutoCreate extends Component
     protected $rules = [
         'nome' => 'required',
         'quantidade' => 'required|integer',
-        'preco' => 'required|decimal:10,2'
+        'preco' => 'required|decimal:2'
     ];
 
     protected $messages = [

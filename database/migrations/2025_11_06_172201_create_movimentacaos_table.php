@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('tipo')->nullable(false);
             $table->string('quantidade')->nullable(false);
             $table->bigInteger('produto_id')->unsigned()->nullable(false);
-            $table->foreing('produto_id')->references('id')->on('produtos')->nullable(false);
+            $table->foreign('produto_id')->references('id')->on('produtos')->nullable(false);
             $table->timestamps();
         });
     }
