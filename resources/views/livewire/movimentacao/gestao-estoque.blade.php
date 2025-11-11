@@ -1,8 +1,10 @@
 <div class="container mt-4">
-    @if (session('success'))
+    @if (session('message'))
         <div class="alert alert-danger">{{ $message }}</div>
     @endif
     <form wire:submit='movimentar'>
+        {{-- <h2 class="title" wire:model='idProduto->nome'> movimentar</h2> --}}
+        <label for="">Tipo:</label>
         <select class="form-select" aria-label="Default select example" wire:model='tipo'>
             <option selected>Escolha um tipo de modificação</option>
             <option value="entrada">Entrada</option>

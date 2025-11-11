@@ -12,10 +12,12 @@ class Produto extends Model
     protected $fillable = [
         'nome',
         'quantidade',
-        'preco'
+        'preco',
+        'quantidade_minima',
+        'descricao'
     ];
 
-    public function produto(){
-        return Produto::belongTo(Movimentacao::class);
+    public function movimentacoes(){
+        return $this->HasMany(Movimentacao::class, 'produto_id');
     }
 }

@@ -39,19 +39,25 @@ class DatabaseSeeder extends Seeder
          Produto::create([
             'nome' => 'vestido',
             'quantidade' => '200',
-            'preco' => '22.00'
+            'preco' => '22.00',
+            'descricao' => '',
+            'quantidade_minima' => '5'
         ]);
 
         Produto::create([
             'nome' => 'blusa',
             'quantidade' => '200',
-            'preco' => '22.00'
+            'preco' => '22.00',
+            'descricao' => '',
+            'quantidade_minima' => '5'
         ]);
 
         Produto::create([
             'nome' => 'saia',
             'quantidade' => '200',
-            'preco' => '22.00'
+            'preco' => '22.00',
+            'descricao' => '',
+            'quantidade_minima' => '5'
         ]);
     }
 }

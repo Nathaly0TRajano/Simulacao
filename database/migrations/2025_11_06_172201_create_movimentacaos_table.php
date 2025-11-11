@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('movimentacaos', function (Blueprint $table) {
             $table->id();
-            $table->string('tipo')->nullable(false);
+            $table->enum('tipo', ['entrada', 'saida'])->nullable(false);
             $table->string('quantidade')->nullable(false);
-            $table->bigInteger('produto_id')->unsigned()->nullable(false);
+            $table->date('data_movimentacao');
+            $table->bigInteger('produto_id')->unsigned()->nullable(false)->constrained()->onDelete('cascade');
             $table->foreign('produto_id')->references('id')->on('produtos')->nullable(false);
             $table->timestamps();
         });

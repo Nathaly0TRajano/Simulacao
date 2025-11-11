@@ -34,6 +34,7 @@ class UserCreate extends Component
         ]);
 
         session()->flash('success', 'Cadastrado com sucesso');
+        return redirect()->route('user.index');
     }
     
 }

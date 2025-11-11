@@ -12,11 +12,5 @@ class Logout extends Component
         return view('livewire.auth.logout');
     }
 
-   public function logout(){
-    Auth::logout();
-    session()->invalidate();
-    session()->regenerateToken();
-
-    return redirect()->route('login');
-   } 
+   
 }

@@ -11,7 +11,7 @@ class UserIndex extends Component
 
     public function render()
     {
-        $users = User::where('name', 'like', '%'.$this->search.'%')->get();
+        $users = User::where('email', 'like', '%'.$this->search.'%')->get();
         return view('livewire.user.user-index', compact('users'));
     }
 

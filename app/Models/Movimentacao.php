@@ -16,7 +16,7 @@ class Movimentacao extends Model
         'data_movimentacao',
     ];
 
-      public function movimentacao(){
-        return Movimentacao::HasOne(Produto::class);
+      public function produto(){
+        return $this->belongsTo(Produto::class, 'id');
     }
 }
